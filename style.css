@@ -232,7 +232,8 @@ textarea {
   color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-size: 16px; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -337,15 +338,16 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
-button.btn-main {
+button.btn-main, input[type="submit"].btn-main {
   background: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
   text-shadow: none;
   border: 1px solid #00cc00;
   color: #00cc00;
-  padding: 10px 20px; }
-  button.btn-main:hover {
+  padding: 10px 20px;
+  font-size: 1.25rem; }
+  button.btn-main:hover, input[type="submit"].btn-main:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
     text-shadow: none;
@@ -360,34 +362,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: .75rem;
-  line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+  border-radius: 3px; }
 
 /* Fields */
 input[type="text"],
@@ -438,7 +413,6 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -469,7 +443,9 @@ a {
     text-decoration: none; }
 
 /* Small menu. */
-.menu-toggle,
+.menu-toggle {
+  display: none; }
+
 .main-navigation.toggled ul {
   display: block; }
 
@@ -497,6 +473,14 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.menu ul li {
+  padding: 0 10px;
+  border-right: 1px solid #fff; }
+  .menu ul li:first-child {
+    padding-left: 0; }
+  .menu ul li:last-child {
+    border: none; }
 
 /*--------------------------------------------------------------
 # Accessibility

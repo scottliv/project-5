@@ -31,11 +31,11 @@ get_header(); ?>
          <label for="quote-source-url">Source Url</label>
          <input type="url" id="source-url">
 
-         <input type="submit" id="submit-quote">
+         <input type="submit" class="btn-main" id="submit-quote">
 
        </form>
 
-       <button class="hidden" id="submit-another">Submit Another</button>
+       <button class="hidden btn-main" id="submit-another">Submit Another</button>
 
       <?php else:?>
         <p>You must be logged in to submit a quote</p>
