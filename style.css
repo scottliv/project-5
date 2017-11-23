@@ -1,7 +1,7 @@
 /*!
-Theme Name: Quotes on Dev Starter Theme
+Theme Name: Quotes on Dev
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Scott Livingstone
 Author URI: http://www.redacademy.com
 Description: A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
 Version: 1.0.0
@@ -229,7 +229,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #fff;
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
@@ -293,7 +293,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  background: #000; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -335,6 +336,21 @@ img {
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
+
+button.btn-main {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  border: 1px solid #00cc00;
+  color: #00cc00;
+  padding: 10px 20px; }
+  button.btn-main:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none;
+    border-color: #009900;
+    color: #009900; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -407,11 +423,9 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
+  color: #00cc00; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #009900; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
