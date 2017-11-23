@@ -9,13 +9,12 @@
     
     $.ajax({
       method: 'get',
-      url: api_vars.root_url + '/wp/v2/posts/',
+      url: api_vars.root_url + '/wp/v2/posts/?filter[orderby]=rand&filter[posts_per_page]=1',
     })
     .done(function(data){
-      // console.log(data);
-      var random = Math.floor(Math.random()* data.length);
-      var post = data[random];
-      console.log(post);
+     
+      var post = data[0];
+      console.log(data);
       var title = post.title.rendered;
       var content = post.content.rendered;
       var source = post._qod_quote_source;
@@ -38,26 +37,36 @@
   $('#submit-quote').on('click', function (event) {
     event.preventDefault();
     var title = $('#title').val();
-    var content = $('#content').val();
+    var quote = $('#quote').val();
     var source = $('#source').val();
-    var sourceUrl = $('#sourceUrl').val();
+    var sourceUrl = $('#source-url').val();
 
     $.ajax({
       method: 'post',
       url: api_vars.root_url + 'wp/v2/posts/',
       data: {
         title: title,
-        content: content,
-        _qod_quote_source = source,
-        _qod_quote_source_url = sourceUrl
+        content: quote,
+        status: 'publish',
+        _qod_quote_source: source,
+        _qod_quote_source_url: sourceUrl
       },
       beforeSend: function (xhr) {
-        xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
+        xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
       }
-    }).done(function (response) {
-      alert('Success! made a new post');
+    }).done(function (data) {
+      $('form').trigger('reset');
+      $('form').hide();
+      $('article').append('<p>Success! made a new post</p>');
+      console.log(data);
     });
   });
+
+  $('#submit-another').on('click', function (event){
+    event.preventDefault();
+    $('article p:last-child').remove();
+    $('form').show();
+  })
 
 })(jQuery);
 
