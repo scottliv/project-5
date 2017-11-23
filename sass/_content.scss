@@ -9,7 +9,7 @@
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+	margin: 0 0 2 * $base__space-unit;
 }
 
 .updated:not(.published){
@@ -30,4 +30,19 @@
 .page-links {
 	clear: both;
 	margin: 0 0 $base__space-unit;
+}
+
+body {
+	margin: 3rem 1rem;
+}
+
+.content-area {
+	margin-bottom: 4rem;
+}
+
+body.home, body.single-post {
+
+	.entry-meta {
+		display: flex
+	}
 }
