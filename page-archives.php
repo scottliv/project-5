@@ -20,13 +20,27 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
-			<?php wp_list_categories(); ?>
+<?php		
+	$categories = get_categories();
+?>
+
+<div class="post_categories">
+<h2>Categories</h2>
+<?php
+foreach ( $categories as $category ):
+		$category_link = get_category_link( $category->term_id );
+?>
+	<a href="<?php echo $category_link ?>" title="<?php echo $category->name ?> Category"> <?php echo $category->name ?> </a>
+
+<?php endforeach; ?>
+</div>
 
 <?php
 	$tags = get_tags();
 ?>
 
 <div class="post_tags">
+<h2>Tags</h2>
 <?php
 foreach ( $tags as $tag ):
 		$tag_link = get_tag_link( $tag->term_id );
