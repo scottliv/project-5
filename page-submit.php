@@ -20,11 +20,11 @@ get_header(); ?>
        <form name="quote-form" class="quote-form" id="quote-submission-form">
         <div class="form-element-container">
           <label for="author">Author of Quote</label>
-          <input type="text" id="title" placeholder="Author">
+          <input type="text" id="title">
         </div>
         <div class="form-element-container">
           <label for="quote-content">Quote</label>
-          <textarea id="quote" placeholder="Quote"></textarea>
+          <textarea id="quote"></textarea>
         </div>
         <div class="form-element-container">
           <label for="quote-source">Quote Source</label>

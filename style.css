@@ -442,6 +442,10 @@ big {
 span.source {
   font-size: 1.25rem; }
 
+h2.archive-title {
+  font-size: 1.5rem;
+  margin: 1rem 0; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -572,6 +576,8 @@ div.form-element-container {
   margin-bottom: 2rem; }
   div.form-element-container label {
     margin-bottom: 1rem; }
+  div.form-element-container:last-child {
+    margin-bottom: 0; }
 
 form.quote-form {
   display: -webkit-box;
