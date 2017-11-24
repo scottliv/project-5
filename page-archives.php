@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main archives" role="main">
 			<h1 class="entry-title">Archives</h1>
 			<h2 class="archive-title">Quote Authors</h2>
 			<?php $args = array( 'post_type' => 'post', 'posts_per_page' => -1 ); $query = new WP_Query( $args );?>		

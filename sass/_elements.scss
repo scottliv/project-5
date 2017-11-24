@@ -75,10 +75,11 @@ button.btn-main, input[type="submit"].btn-main {
 	background: transparent;
 	box-shadow: none;
 	text-shadow: none;
-	border: 1px solid $color__link;
+	border: 2px solid $color__link;
 	color: $color__link;
 	padding: 10px 20px;
 	font-size: 1.25rem;
+	font-weight: 500;
 	&:hover {
 		box-shadow: none;
 		text-shadow: none;

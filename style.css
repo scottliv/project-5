@@ -359,8 +359,8 @@ th {
 
 @font-face {
   font-family: 'Exo';
-  src: url("/../../fonts/Exo-Light.eot");
-  src: url("/../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("/../../fonts/Exo-Light.woff") format("woff"), url("/../../fonts/Exo-Light.ttf") format("truetype");
+  src: url("../../fonts/Exo-Light.eot");
+  src: url("../../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/Exo-Light.woff") format("woff"), url("../../fonts/Exo-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 
@@ -391,7 +391,11 @@ textarea {
   font-size: 1rem;
   line-height: 1.5;
   font-size: 16px;
+  line-height: 1.5;
   font-family: "Exo", sans-serif; }
+
+body, p, a {
+  font-weight: 300; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -445,6 +449,9 @@ span.source {
 h2.archive-title {
   font-size: 1.5rem;
   margin: 1rem 0; }
+
+.entry-content p {
+  font-size: 1.25rem; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -512,10 +519,11 @@ button.btn-main, input[type="submit"].btn-main {
   -webkit-box-shadow: none;
           box-shadow: none;
   text-shadow: none;
-  border: 1px solid #00cc00;
+  border: 2px solid #00cc00;
   color: #00cc00;
   padding: 10px 20px;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  font-weight: 500; }
   button.btn-main:hover, input[type="submit"].btn-main:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -587,8 +595,7 @@ form.quote-form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #fff;
-  font-weight: 300; }
+  color: #fff; }
   form.quote-form input, form.quote-form textarea {
     padding: 10px;
     background: transparent;
@@ -690,6 +697,11 @@ a {
     padding-left: 0; }
   .menu ul li:last-child {
     border: none; }
+
+main.archives {
+  line-height: 1.75; }
+  main.archives a {
+    margin-right: 1rem; }
 
 /*--------------------------------------------------------------
 # Accessibility

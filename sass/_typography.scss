@@ -12,7 +12,12 @@ textarea {
 	font-size: 1rem;
 	line-height: $font__line-height-body;
 	font-size: 16px;
+	line-height: 1.5;
 	font-family: "Exo", sans-serif;
+}
+
+body, p, a {
+	font-weight: 300;
 }
 
 /* Headings */
@@ -81,4 +86,8 @@ span.source {
 h2.archive-title {
 	font-size: 1.5rem;
 	margin: 1rem 0;
+}
+
+.entry-content p {
+	font-size: 1.25rem;
 }
