@@ -1,16 +1,13 @@
 (function($){
 
-  $('#new-quote-button').on('click', function (event) {
-    event.preventDefault();
-    $('#new-quote-button').blur();
-    // Get a new quote
+  function ajaxGet(request) {
     $.ajax({
       method: 'get',
       // Go to the wordpress rest api and get one random post
-      url: api_vars.root_url + '/wp/v2/posts/?filter[orderby]=rand&filter[posts_per_page]=1',
+      url: api_vars.root_url + request,
     })
-    .done(function(data){
-      
+    .done(function (data) {
+
       var post = data[0];
       var slug = post.slug;
       var title = post.title.rendered;
@@ -19,30 +16,23 @@
       var sourceUrl = post._qod_quote_source_url;
 
       // Append slug to url
-      history.pushState(null, null, slug);
+      history.replaceState(null, null, slug);
 
       // Change the html elements of the post
-      $('.entry-title').html('-'+title);
+      $('.entry-title').html('-' + title);
       $('.entry-content').html(content);
-      if ( source !== '' && sourceUrl !== '') {
+      if (source !== '' && sourceUrl !== '') {
         $('.source').html('<a href="' + sourceUrl + '">' + source + '</a>');
-      }
-      else if ( source !== '' ) {
+      } else if (source !== '') {
         $('.source').html(source);
-      }
-      else{
+      } else {
         $('.source').html('Source Unknown');
       }
     })
-  });
+  }
 
-  // Post a quote
-
-  $('#submit-quote').on('click', function (event) {
-
-    event.preventDefault();
-
-    // Get content from submit form
+  function ajaxPost () {
+     // Get content from submit form
     var title = $('#title').val();
     var quote = $('#quote').val();
     var source = $('#source').val();
@@ -72,6 +62,22 @@
       $('article').append('<p>Success! made a new post</p>');
       $('#submit-another').toggleClass('hidden');
     });
+  }
+
+  $('#new-quote-button').on('click', function (event) {
+    event.preventDefault();
+    $('#new-quote-button').blur();
+    // Get a random quote
+   var randomRequest = 'wp/v2/posts/?filter[orderby]=rand&filter[posts_per_page]=1';
+
+   ajaxGet(randomRequest);
+  });
+
+  // Post a quote
+  $('#submit-quote').on('click', function (event) {
+
+    event.preventDefault();
+    ajaxPost();   
   });
 
   // Show new form
@@ -81,5 +87,12 @@
     $('form').show();
     $('#submit-another').toggleClass('hidden');
   })
+
+  // Handle back button presses 
+  window.onpopstate = function (event) {
+    alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+    var historyRequest = document.location;
+    ajaxGet(historyRequest);
+  };
 
 })(jQuery);
