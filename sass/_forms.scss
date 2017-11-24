@@ -19,12 +19,13 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
+	color: #fff;
+	border: 2px solid $color__link;
+	;
 	border-radius: 3px;
 
 	&:focus {
-		color: #111;
+		color: #fff;
 	}
 }
 
@@ -39,4 +40,39 @@ input[type="search"] {
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+button.hidden {
+	visibility: hidden;
+}
+
+	div.form-element-container {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2rem;
+		label {
+			margin-bottom: 1rem;
+		}
+	}
+
+
+form.quote-form {
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	font-weight: 300;
+	input, textarea{
+		padding: 10px;
+		background: transparent;
+		color: $color__link;
+	}
+	textarea {
+		height: 80px;
+	}
+	input {
+		width: 60%;
+	}
+	input[type="submit"] {
+		width: 40%;
+	}
 }

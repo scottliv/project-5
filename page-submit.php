@@ -17,22 +17,26 @@ get_header(); ?>
 			<?php endwhile; // End of the loop. ?>
       <?php if (is_user_logged_in() && current_user_can( 'edit_posts' ) ): ?>
 
-       <form name="quote-form" id="quote-submission-form">
-
-        <label for="author">Author of Quote</label>
-        <input type="text" id="title" placeholder="Author">
-
-        <label for="quote-content">Quote</label>
-        <textarea id="quote" placeholder="Quote"></textarea>
-
-         <label for="quote-source">Quote Source</label>
-         <input type="text" id="source">
-
-         <label for="quote-source-url">Source Url</label>
-         <input type="url" id="source-url">
-
-         <input type="submit" class="btn-main" id="submit-quote">
-
+       <form name="quote-form" class="quote-form" id="quote-submission-form">
+        <div class="form-element-container">
+          <label for="author">Author of Quote</label>
+          <input type="text" id="title" placeholder="Author">
+        </div>
+        <div class="form-element-container">
+          <label for="quote-content">Quote</label>
+          <textarea id="quote" placeholder="Quote"></textarea>
+        </div>
+        <div class="form-element-container">
+          <label for="quote-source">Quote Source</label>
+          <input type="text" id="source">
+        </div>
+        <div class="form-element-container">
+          <label for="quote-source-url">Source Url</label>
+          <input type="url" id="source-url">
+        </div>
+        <div class="form-element-container">
+          <input type="submit" class="btn-main" id="submit-quote">
+        </div>
        </form>
 
        <button class="hidden btn-main" id="submit-another">Submit Another</button>

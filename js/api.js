@@ -70,6 +70,7 @@
       $('form').trigger('reset');
       $('form').hide();
       $('article').append('<p>Success! made a new post</p>');
+      $('#submit-another').toggleClass('hidden');
     });
   });
 
@@ -78,6 +79,7 @@
     event.preventDefault();
     $('article p:last-child').remove();
     $('form').show();
+    $('#submit-another').toggleClass('hidden');
   })
 
 })(jQuery);
