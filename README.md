@@ -1,23 +1,18 @@
-# Quotes on Dev Starter
+# Quotes on Dev 
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+Using Ajax and REST API to generate content on a wordpress site.
 
-## Installation
+## Technologies
+Javascipt, JQuery, Ajax, PHP, Wordpress, CSS3, HTML 5, gulp
 
-### 1. Download me (don't clone me!)
+## Learning
 
-Then add me to your `wp-content/themes` directory.
+In this project I learned how to use the REST API to get and post content dynamically on a wordpress site without a page refresh.
 
-### 2. Rename the `quotesondev-starter-master` directory
+## Acknowlegments
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+This theme was built on a red academy starter theme built on _s (https://underscores.me/)
 
-### 3. Install the dev dependencies
+## Author
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
-
-### 4. Update the proxy in `gulpfile.js`
-
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
-
-And now would be a good time to `git init` :)
+Scott Livingstone
