@@ -149,4 +149,17 @@ main.archives {
 	}
 }
 
+footer.site-footer {
+	@media #{$tablet} {
+		display: flex;
+
+		nav{
+			max-width: 270px;
+		}
+	}
+	@media #{$desktop} {
+		justify-content: flex-end;
+	}
+}
+
 

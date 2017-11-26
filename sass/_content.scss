@@ -12,6 +12,11 @@
 	margin: 0 0 2 * $base__space-unit;
 }
 
+div.site {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
 .updated:not(.published){
 	display: none;
 }
@@ -46,3 +51,25 @@ body.home, body.single-post {
 		display: flex
 	}
 }
+
+.site-content {
+	@media #{$desktop} {
+		flex-basis: 80%;
+		flex-grow: 2;
+	}
+}
+
+.quotes-container {
+	@media #{$desktop} {
+	display: flex;
+	}
+}
+.quotes {
+	visibility: hidden;
+	@media #{$desktop}{
+		visibility: visible;
+		font-size: 7rem;
+		padding: 0 3rem;
+		color: $color__link;
+	}
+} 

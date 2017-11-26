@@ -452,6 +452,16 @@ h2.archive-title {
 
 .entry-content p {
   font-size: 1.25rem; }
+  @media (min-width: 620px) {
+    .entry-content p {
+      font-size: 1.75rem; } }
+  @media (min-width: 1080px) {
+    .entry-content p {
+      font-size: 2.25rem; } }
+
+@media (min-width: 620px) {
+  .archives a {
+    font-size: 1.25rem; } }
 
 /*--------------------------------------------------------------
 # Elements
@@ -703,6 +713,20 @@ main.archives {
   main.archives a {
     margin-right: 1rem; }
 
+@media (min-width: 620px) {
+  footer.site-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    footer.site-footer nav {
+      max-width: 270px; } }
+
+@media (min-width: 1080px) {
+  footer.site-footer {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; } }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -770,6 +794,10 @@ main.archives {
 .hentry {
   margin: 0 0 3rem; }
 
+div.site {
+  max-width: 1080px;
+  margin: 0 auto; }
+
 .updated:not(.published) {
   display: none; }
 
@@ -797,6 +825,29 @@ body.home .entry-meta, body.single-post .entry-meta {
   display: -ms-flexbox;
   display: flex; }
 
+@media (min-width: 1080px) {
+  .site-content {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2; } }
+
+@media (min-width: 1080px) {
+  .quotes-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.quotes {
+  visibility: hidden; }
+  @media (min-width: 1080px) {
+    .quotes {
+      visibility: visible;
+      font-size: 7rem;
+      padding: 0 3rem;
+      color: #00cc00; } }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -818,4 +869,19 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* All Archives Page */
+body.archive article {
+  border-top: 1px dashed #ffffff; }
+  body.archive article:last-child {
+    padding-bottom: 3rem;
+    border-bottom: 1px dashed #ffffff; }
+
 /* Submit a Quote Page */
+/* Site header */
+header.site-header .home-link a img {
+  width: 600px; }
+
+@media (min-width: 1080px) {
+  header.site-header {
+    text-align: center; }
+    header.site-header .home-link a img {
+      width: 700px; } }

@@ -29,5 +29,8 @@
 					<a href="<?php echo esc_url( home_url( '/' )); ?>"><img src="<?php echo get_template_directory_uri() . "/images/qod-logo.svg"?>" alt="Quotes on Dev home link"></a>
 				</div>
 			</header><!-- #masthead -->
+			<div class="quotes-container">
+				<aside class="quotes"><i class="fa fa-quote-left" aria-hidden="true"></i></aside>
+				<div id="content" class="site-content">
 
-			<div id="content" class="site-content">
+		

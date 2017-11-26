@@ -7,8 +7,9 @@
 
 ?>
 
-			</div><!-- #content -->
-
+				</div><!-- #content -->
+				<aside class="quotes"><i class="fa fa-quote-right" aria-hidden="true"></i></aside>
+			</div><!-- .quotes-container -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>

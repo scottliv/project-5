@@ -1,5 +1,6 @@
 (function($){
 
+  // Ajax functions
   function ajaxGet(request) {
     $.ajax({
       method: 'get',
@@ -62,8 +63,12 @@
       $('article').append('<p>Success! made a new post</p>');
       $('#submit-another').toggleClass('hidden');
     });
+    
   }
 
+  // Button Event Handlers
+
+  // Get a new Quote
   $('#new-quote-button').on('click', function (event) {
     event.preventDefault();
     $('#new-quote-button').blur();
@@ -75,9 +80,9 @@
 
   // Post a quote
   $('#submit-quote').on('click', function (event) {
-
     event.preventDefault();
     ajaxPost();   
+
   });
 
   // Show new form
@@ -88,11 +93,6 @@
     $('#submit-another').toggleClass('hidden');
   })
 
-  // Handle back button presses 
-  window.onpopstate = function (event) {
-    alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
-    var historyRequest = document.location;
-    ajaxGet(historyRequest);
-  };
+  
 
 })(jQuery);

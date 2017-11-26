@@ -90,4 +90,16 @@ h2.archive-title {
 
 .entry-content p {
 	font-size: 1.25rem;
+	@media #{$tablet} {
+		font-size: 1.75rem;
+	}
+	@media #{$desktop} {
+		font-size: 2.25rem;
+	}
+}
+
+.archives a {
+	@media #{$tablet} {
+		font-size: 1.25rem;
+	}
 }

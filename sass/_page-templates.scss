@@ -4,4 +4,27 @@
 
 /* All Archives Page */
 
+body.archive article {
+  border-top: 1px dashed #ffffff;
+  &:last-child {
+    padding-bottom: 3rem;
+    border-bottom: 1px dashed #ffffff;
+  }
+}
+
 /* Submit a Quote Page */
+
+
+/* Site header */
+
+header.site-header {
+  .home-link a img {
+    width: 600px;
+  }
+  @media #{$desktop} {
+    text-align: center;
+      .home-link a img {
+      width: 700px;
+      }
+  }
+}
