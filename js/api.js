@@ -19,7 +19,6 @@
 
       // Append slug to url
       history.pushState({page:slug}, null, url);
-      console.log(history.state);
 
       // Change the html elements of the post
       $('.entry-title').html('-' + title);
@@ -31,7 +30,9 @@
       } else {
         $('.source').html('Source Unknown');
       }
-    })
+      }).fail(function () {
+        $('article').append('<p>Unable to get a post</p>');
+      });
   }
 
   function ajaxPost () {
@@ -100,7 +101,6 @@
    window.onpopstate = function (e) {
     var url = api_vars.home_url;
     var state = e.state.page;
-    console.log(state);
     if (state !== null) {
       window.location.href = url + '/' + state;
     }
