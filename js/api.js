@@ -15,9 +15,10 @@
       var content = post.content.rendered;
       var source = post._qod_quote_source;
       var sourceUrl = post._qod_quote_source_url;
+      var homeUrl = api_vars.home_url;
 
       // Append slug to url
-      history.replaceState(null, null, slug);
+      history.replaceState(null, null, homeUrl + '/' + slug);
 
       // Change the html elements of the post
       $('.entry-title').html('-' + title);
