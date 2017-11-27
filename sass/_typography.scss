@@ -98,6 +98,10 @@ h2.archive-title {
 	}
 }
 
+.about .entry-content p {
+	font-size: 1rem;
+}
+
 .archives a {
 	@media #{$tablet} {
 		font-size: 1.25rem;
