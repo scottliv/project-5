@@ -25,6 +25,8 @@ textarea {
 
 	&:focus {
 		color: #fff;
+		border-color: #fff;
+		outline: none;
 	}
 }
 
@@ -85,13 +87,7 @@ form.search-form {
 	input, button {
 		background: transparent;
 	}
-	input {
-		&:focus{
-			border-color: white;
-			box-shadow: none;
-			outline: none;
-		}
-	}
+	
 	button {
 		border: none;
 		color: $color__link;

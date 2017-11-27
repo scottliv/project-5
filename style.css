@@ -567,7 +567,9 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #fff; }
+    color: #fff;
+    border-color: #fff;
+    outline: none; }
 
 input[type="text"],
 input[type="email"],
@@ -622,12 +624,6 @@ form.search-form fieldset {
 
 form.search-form input, form.search-form button {
   background: transparent; }
-
-form.search-form input:focus {
-  border-color: white;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  outline: none; }
 
 form.search-form button {
   border: none;

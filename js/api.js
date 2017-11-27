@@ -64,8 +64,9 @@
       $('form').hide();
       $('article').append('<p>Success! made a new post</p>');
       $('#submit-another').toggleClass('hidden');
+    }).fail(function () {
+       $('article').append('<p>Unable to make a post</p>');
     });
-    
   }
 
   // Button Event Handlers
@@ -95,6 +96,7 @@
     $('#submit-another').toggleClass('hidden');
   })
 
+  // Enable the back button to cycle through quote history
    window.onpopstate = function (e) {
     var url = api_vars.home_url;
     var state = e.state.page;
