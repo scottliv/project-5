@@ -15,10 +15,11 @@
       var content = post.content.rendered;
       var source = post._qod_quote_source;
       var sourceUrl = post._qod_quote_source_url;
-      var homeUrl = api_vars.home_url;
+      var url = api_vars.home_url + '/' + slug;
 
       // Append slug to url
-      history.replaceState(null, null, homeUrl + '/' + slug);
+      history.pushState({page:slug}, null, url);
+      console.log(history.state);
 
       // Change the html elements of the post
       $('.entry-title').html('-' + title);
@@ -93,6 +94,15 @@
     $('form').show();
     $('#submit-another').toggleClass('hidden');
   })
+
+   window.onpopstate = function (e) {
+    var url = api_vars.home_url;
+    var state = e.state.page;
+    console.log(state);
+    if (state !== null) {
+      window.location.href = url + '/' + state;
+    }
+   }
 
   
 
