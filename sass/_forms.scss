@@ -21,7 +21,6 @@ input[type="search"],
 textarea {
 	color: #fff;
 	border: 2px solid $color__link;
-	;
 	border-radius: 3px;
 
 	&:focus {
@@ -76,5 +75,25 @@ form.quote-form {
 	}
 	input[type="submit"] {
 		width: 40%;
+	}
+}
+
+form.search-form {
+	fieldset{
+		border: none;
+	}
+	input, button {
+		background: transparent;
+	}
+	input {
+		&:focus{
+			border-color: white;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+	button {
+		border: none;
+		color: $color__link;
 	}
 }
