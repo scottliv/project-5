@@ -45,12 +45,12 @@ body {
 	margin-bottom: 4rem;
 }
 
-body.home, body.single-post {
+// body.home, body.single-post {
 
-	.entry-meta {
-		display: flex
-	}
-}
+// 	// .entry-meta {
+// 	// 	display: flex
+// 	// }
+// }
 
 .site-content {
 	@media #{$desktop} {

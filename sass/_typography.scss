@@ -75,8 +75,9 @@ big {
 }
 
 .entry-meta .entry-title {
+	display: inline;
+	min-width: max-content;
 	font-size: 1.25rem;
-	margin: 0 0.75rem 0 0;
 }
 
 span.source {

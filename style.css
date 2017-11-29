@@ -440,8 +440,11 @@ big {
   font-size: 125%; }
 
 .entry-meta .entry-title {
-  font-size: 1.25rem;
-  margin: 0 0.75rem 0 0; }
+  display: inline;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  font-size: 1.25rem; }
 
 span.source {
   font-size: 1.25rem; }
@@ -834,11 +837,6 @@ body {
 
 .content-area {
   margin-bottom: 4rem; }
-
-body.home .entry-meta, body.single-post .entry-meta {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
 
 @media (min-width: 1080px) {
   .site-content {

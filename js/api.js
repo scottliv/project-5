@@ -4,7 +4,7 @@
   function ajaxGet(request) {
     $.ajax({
       method: 'get',
-      // Go to the wordpress rest api and get one random post
+      // Go to the wordpress rest api and get the request
       url: api_vars.root_url + request,
     })
     .done(function (data) {
@@ -21,7 +21,7 @@
       history.pushState({page:slug}, null, url);
 
       // Change the html elements of the post
-      $('.entry-title').html('-' + title);
+      $('.entry-title').html('-' + title + ', ');
       $('.entry-content').html(content);
       if (source !== '' && sourceUrl !== '') {
         $('.source').html('<a href="' + sourceUrl + '">' + source + '</a>');
@@ -105,7 +105,5 @@
       window.location.href = url + '/' + state;
     }
    }
-
-  
 
 })(jQuery);
